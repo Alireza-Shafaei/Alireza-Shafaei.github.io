@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alireza Shafaei | Personal Academic Website</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #00203c;
+            --accent-color: #9c27b0;
+            --text-color: #333;
+            --bg-color: #ffffff;
+            --card-bg: #fdfdfd;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+            cursor: pointer;
+            transition: color 0.2s;
+            padding-bottom: 13px;
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: #111;
+        }
+
+        nav a.active::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+
+        /* Pages */
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 650px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+        }
+
+        .hero-text h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #111;
+        }
+
+        .hero-text p {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .hero-text ul {
+            list-style: none;
+        }
+
+        .hero-text ul li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .hero-text ul li::before {
+            content: "•";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .hero-img img {
+            width: 190px;
+            height: 190px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        /* Section Titles */
+        h2.section-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin: 40px 0 20px 0;
+            color: #111;
+            text-transform: lowercase;
+        }
+
+        /* Project Cards */
+        .project-card {
+            display: flex;
+            gap: 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .project-badge {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 3px 8px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .project-content h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #111;
+        }
+
+        .project-content .authors {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .project-content .description {
+            font-size: 0.9rem;
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: #222;
+            border: 1px solid #222;
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border-radius: 4px;
+            text-transform: uppercase;
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #222;
+            color: #fff;
+        }
+
+        /* CV Tab Layout */
+        .cv-box {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            background: var(--card-bg);
+            margin-bottom: 25px;
+        }
+
+        .cv-box h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #111;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .cv-row {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .cv-time {
+            min-width: 160px;
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .cv-details h4 {
+            font-size: 1rem;
+            color: #111;
+        }
+
+        .cv-details p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .cv-list {
+            list-style: none;
+            font-size: 0.9rem;
+            color: #444;
+        }
+
+        .cv-list li {
+            margin-bottom: 6px;
+            padding-left: 12px;
+            position: relative;
+        }
+
+        .cv-list li::before {
+            content: "-";
+            position: absolute;
+            left: 0;
+            color: #888;
+        }
+
+        /* Footer & Socials */
+        footer {
+            margin-top: 60px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 15px;
+        }
+
+        .social-icons a {
+            color: #222;
+            font-size: 1.5rem;
+            transition: transform 0.2s, color 0.2s;
+        }
+
+        .social-icons a:hover {
+            color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        footer p {
+            font-size: 0.8rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Navigation Bar -->
+        <nav>
+            <a onclick="showPage('about')" id="nav-about" class="active">About</a>
+            <a onclick="showPage('cv')" id="nav-cv">CV</a>
+        </nav>
+
+        <!-- ================= ABOUT PAGE ================= -->
+        <div id="about" class="page active">
+            <section class="hero">
+                <div class="hero-text">
+                    <h1>Alireza Shafaei</h1>
+                    <p>Hi, I'm Alireza Shafaei. I am currently a Master's student in Electrical Engineering (Digital Systems) at <strong>Sharif University of Technology</strong>[cite: 2]. My passion lies at the intersection of deep generative modeling, mathematical optimization, and highly efficient distributed Edge-Cloud intelligence[cite: 2].</p>
+                    <p>My current research interests span:</p>
+                    <ul>
+                        <li>Generative AI, Diffusion Models & Energy-Based Models[cite: 2]</li>
+                        <li>Large Language Models (LLMs) & Retrieval-Augmented Generation (RAG)[cite: 2]</li>
+                        <li>Mathematical Optimization (Queueing Stability \& Lyapunov Drift)[cite: 2]</li>
+                        <li>Edge-Cloud Computing Architectures[cite: 2]</li>
+                    </ul>
+                </div>
+                <div class="hero-img">
+                    <img src="profile.jpg" alt="Alireza Shafaei">
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2 class="section-title">selected projects</h2>
+
+                <div class="project-card">
+                    <div><span class="project-badge">Edge AI</span></div>
+                    <div class="project-content">
+                        <h3>LLM-Enabled In-Context Learning for Task Offloading in Edge Networks</h3>
+                        <div class="authors">Alireza Shafaei, Supervisor: Dr. Shah Mansouri[cite: 2]</div>
+                        <div class="description">Resource allocation framework (DNN Partitioning) utilizing RAG and Prompting techniques, optimized via queueing stability models and Lyapunov drift theory[cite: 2].</div>
+                        <div class="btn-group">
+                            <a href="https://github.com/Alireza-Shafaei" class="btn" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div><span class="project-badge">Generative</span></div>
+                    <div class="project-content">
+                        <h3>Time-Aware Post-Training Quantization for Diffusion Language Models</h3>
+                        <div class="authors">Alireza Shafaei, Course Project[cite: 2]</div>
+                        <div class="description">Developed a quantization framework to achieve significant model compression and inference acceleration without sacrificing generation quality[cite: 2].</div>
+                        <div class="btn-group">
+                            <a href="https://github.com/Alireza-Shafaei" class="btn" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= CV PAGE ================= -->
+        <div id="cv" class="page">
+            <!-- General Info -->
+            <div class="cv-box">
+                <h3>General Information</h3>
+                <p><strong>Full Name:</strong> Alireza Shafaei[cite: 2]</p>
+                <p><strong>Location:</strong> No. 82, West 124 Alley, Tehran Pars, Tehran, Iran[cite: 2]</p>
+                <p><strong>Languages:</strong> Persian (Native), English (Advanced)[cite: 2]</p>
+            </div>
+
+            <!-- Education -->
+            <div class="cv-box">
+                <h3>Education</h3>
+                <div class="cv-row">
+                    <div class="cv-time">2024 -- Present</div>
+                    <div class="cv-details">
+                        <h4>M.S. in Electrical Engineering (Digital Systems)</h4>
+                        <p>Sharif University of Technology | GPA: 18.02/20[cite: 2]</p>
+                    </div>
+                </div>
+                <div class="cv-row">
+                    <div class="cv-time">2019 -- 2024</div>
+                    <div class="cv-details">
+                        <h4>B.S. in Electrical Engineering</h4>
+                        <p>Sharif University of Technology | GPA: 17.03/20[cite: 2]</p>
+                    </div>
+                </div>
+                <div class="cv-row">
+                    <div class="cv-time">2021 -- 2024</div>
+                    <div class="cv-details">
+                        <h4>Minor in Economics</h4>
+                        <p>Sharif University of Technology[cite: 2]</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TA -->
+            <div class="cv-box">
+                <h3>Teaching Assistantships</h3>
+                <ul class="cv-list">
+                    <li>Neural Networks (MSc) — Dr. Bagheri Shouraki (2025)[cite: 2]</li>
+                    <li>Machine Learning and Vision Lab — Dr. Mohammadzadeh (2025)[cite: 2]</li>
+                    <li>Electronics 1 & 2 — Dr. Fakharzadeh[cite: 2]</li>
+                    <li>Principles of Solid State Devices — Dr. Sarvari[cite: 2]</li>
+                    <li>Design Microprocessor Systems — Dr. Hajsadeghi[cite: 2]</li>
+                </ul>
+            </div>
+
+            <!-- Honors -->
+            <div class="cv-box">
+                <h3>Honors & Awards</h3>
+                <ul class="cv-list">
+                    <li>Ranked <strong>21st</strong> among 20,000 in the National M.Sc. Entrance Exam in EE (2024)[cite: 2]</li>
+                    <li>Ranked <strong>24th</strong> among 150,000 in the National University Entrance Exam in Math & Physics (2019)[cite: 2]</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer / Social Links -->
+        <footer>
+            <div class="social-icons">
+                <a href="mailto:shafaei.erfan.2019@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/Alireza-Shafaei" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank" title="Google Scholar"><i class="fab fa-graduation-cap"></i></a>
+                <a href="https://t.me/Erfan13806" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+            </div>
+            <p>Drop me an email if you want to contact!</p>
+            <p style="margin-top: 15px; color: #bbb;">&copy; 2026 Alireza Shafaei</p>
+        </footer>
+
+    </div>
+
+    <!-- Tab Logic Script -->
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+            // Remove active style from links
+            document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
+            
+            // Show target page
+            document.getElementById(pageId).classList.add('active');
+            // Add active style to clicked link
+            document.getElementById('nav-' + pageId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
