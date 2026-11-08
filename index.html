@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alireza Shafaei</title>
+<meta name="description" content="Alireza Shafaei, M.Sc. researcher in Electrical Engineering (Digital Systems) at Sharif University of Technology. Edge intelligence, trustworthy and private machine learning, generative models, and production ML under drift.">
+<meta name="author" content="Alireza Shafaei">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Alireza Shafaei">
+<meta property="og:description" content="Electrical engineering researcher at Sharif University of Technology, working on edge intelligence and machine learning you can check.">
+<meta property="og:image" content="profile.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23182332'/><path d='M14 62 L30 62 L30 38 L46 38 L46 70 L62 70 L62 30 L78 30 L78 52 L88 52' fill='none' stroke='%237FA2FF' stroke-width='7' stroke-linejoin='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F1F2EC;
+  --sheet:#FAFAF6;
+  --ink:#182332;
+  --ink-2:#4C5868;
+  --ink-3:#7D8794;
+  --rule:#D6D9CE;
+  --cobalt:#2B47B0;
+  --cobalt-soft:#E3E8F6;
+  --ochre:#9A6A12;
+  --sans:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --measure:44rem;
+  --wide:68rem;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#10161F;--sheet:#151D28;--ink:#E7EBF0;--ink-2:#AAB4C1;--ink-3:#7B8696;
+    --rule:#26303D;--cobalt:#8FA8FF;--cobalt-soft:#1C2742;--ochre:#D9A848;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#10161F;--sheet:#151D28;--ink:#E7EBF0;--ink-2:#AAB4C1;--ink-3:#7B8696;
+  --rule:#26303D;--cobalt:#8FA8FF;--cobalt-soft:#1C2742;--ochre:#D9A848;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:5rem;-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:1.125rem;line-height:1.65;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+a{color:var(--cobalt);text-decoration-thickness:1px;text-underline-offset:.18em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px;border-radius:3px}
+::selection{background:var(--cobalt);color:#fff}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:1rem;top:1rem;z-index:50;background:var(--ink);color:var(--paper);padding:.6rem 1rem;font-family:var(--sans)}
+
+/* ---------- top bar ---------- */
+.bar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .2s}
+.bar.stuck{border-bottom-color:var(--rule)}
+.bar-in{max-width:var(--wide);margin:0 auto;padding:0 1.5rem;height:3.6rem;display:flex;align-items:center;gap:1.5rem;font-family:var(--sans)}
+.name-mark{font-weight:700;font-size:1rem;color:var(--ink);text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
+.nav{margin-left:auto;display:flex;gap:1.35rem;font-size:.9rem}
+.nav a{color:var(--ink-2);text-decoration:none;padding:.3rem 0;border-bottom:2px solid transparent;white-space:nowrap}
+.nav a:hover{color:var(--ink)}
+.nav a.on{color:var(--ink);border-bottom-color:var(--cobalt)}
+.theme{flex-shrink:0;width:2.1rem;height:2.1rem;border-radius:50%;border:1px solid var(--rule);background:none;color:var(--ink-2);cursor:pointer;display:grid;place-items:center}
+.theme:hover{color:var(--cobalt);border-color:var(--cobalt)}
+.theme svg{width:1rem;height:1rem;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round}
+:root[data-theme="dark"] .i-moon,:root:not([data-theme="dark"]) .i-sun{display:none}
+
+/* ---------- layout ---------- */
+.wrap{max-width:var(--wide);margin:0 auto;padding:0 1.5rem}
+section{padding:4.5rem 0 1rem}
+.row{display:grid;grid-template-columns:13rem minmax(0,1fr);gap:2.5rem}
+.row > h2{font-family:var(--sans);font-weight:600;font-size:1.05rem;letter-spacing:-.005em;color:var(--ink);padding-top:.3rem;position:sticky;top:5rem;align-self:start}
+.row > h2 small{display:block;font-weight:400;font-size:.85rem;color:var(--ink-3);margin-top:.25rem;letter-spacing:0}
+.body{max-width:var(--measure)}
+
+/* ---------- hero ---------- */
+.hero{padding:4.5rem 0 2rem}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 14rem;gap:3.5rem;align-items:start}
+h1{font-family:var(--sans);font-weight:800;font-size:clamp(3rem,8vw,5.6rem);line-height:.92;letter-spacing:-.045em}
+.role{font-family:var(--sans);font-size:1.15rem;color:var(--ink-2);margin:1.1rem 0 1.8rem;max-width:34rem;line-height:1.45}
+.intro p{max-width:var(--measure);color:var(--ink)}
+.intro p + p{margin-top:1rem}
+.intro p.soft{color:var(--ink-2)}
+.photo{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px;display:block;background:var(--sheet);filter:saturate(.85)}
+.links{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem;font-family:var(--sans);font-size:.92rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.55rem 1rem;border-radius:999px;border:1px solid var(--rule);color:var(--ink);text-decoration:none;background:var(--sheet)}
+.btn:hover{border-color:var(--cobalt);color:var(--cobalt)}
+.btn.main{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn.main:hover{background:var(--cobalt);border-color:var(--cobalt);color:#fff}
+.btn svg{width:1rem;height:1rem;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- news ---------- */
+.news{margin-top:3.5rem;border-top:1px solid var(--rule);padding-top:1.4rem;display:grid;grid-template-columns:13rem minmax(0,1fr);gap:2.5rem}
+.news h2{font-family:var(--sans);font-weight:600;font-size:1.05rem}
+.news ul{list-style:none;max-width:var(--measure)}
+.news li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:1rem;padding:.55rem 0;border-top:1px solid var(--rule)}
+.news li:first-child{border-top:0;padding-top:0}
+.news span{font-family:var(--sans);font-size:.88rem;color:var(--ink-3);padding-top:.2rem}
+.news p{color:var(--ink-2);font-size:1.02rem}
+
+/* ---------- research ---------- */
+.proj{padding:1.6rem 0;border-top:1px solid var(--rule)}
+.proj:first-child{border-top:0;padding-top:.2rem}
+.proj-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem .9rem;font-family:var(--sans);font-size:.88rem;color:var(--ink-3);margin-bottom:.45rem}
+.state{font-weight:600;color:var(--cobalt)}
+.state.done{color:var(--ink-3)}
+.state.new{color:var(--ochre)}
+.proj h3{font-family:var(--sans);font-weight:650;font-size:1.28rem;line-height:1.3;letter-spacing:-.015em;margin-bottom:.6rem}
+.proj p{color:var(--ink-2)}
+.proj p + p{margin-top:.7rem}
+.facts{list-style:none;margin-top:.8rem;display:grid;gap:.35rem}
+.facts li{padding-left:1.1rem;position:relative;color:var(--ink-2);font-size:1.02rem}
+.facts li::before{content:"";position:absolute;left:0;top:.72em;width:.45rem;height:2px;background:var(--cobalt)}
+.sup{font-family:var(--sans);font-size:.9rem;color:var(--ink-3);margin-top:.85rem}
+.sup a{color:var(--ink-2)}
+
+/* ---------- publications ---------- */
+.pub{padding:1.3rem 0;border-top:1px solid var(--rule)}
+.pub:first-child{border-top:0;padding-top:.2rem}
+.pub h3{font-family:var(--serif);font-weight:500;font-size:1.22rem;line-height:1.35;margin-bottom:.35rem}
+.pub .au{font-family:var(--sans);font-size:.95rem;color:var(--ink-2)}
+.pub .au b{color:var(--ink);font-weight:600}
+.pub .venue{font-style:italic;color:var(--ink-2);margin-top:.25rem}
+.pub .meta{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.6rem;font-family:var(--sans);font-size:.82rem}
+.tag{padding:.18rem .6rem;border-radius:4px;background:var(--cobalt-soft);color:var(--cobalt);text-decoration:none}
+a.tag:hover{text-decoration:underline}
+.tag.quiet{background:transparent;border:1px solid var(--rule);color:var(--ink-3)}
+.note{font-family:var(--sans);font-size:.85rem;color:var(--ink-3);margin-top:1rem}
+
+/* ---------- projects index ---------- */
+.group{padding:1.1rem 0;border-top:1px solid var(--rule)}
+.group:first-child{border-top:0;padding-top:.2rem}
+.group h3{font-family:var(--sans);font-weight:600;font-size:1rem;margin-bottom:.55rem}
+.group dl{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:.45rem 1.4rem}
+.group dt{font-family:var(--sans);font-weight:500;font-size:.98rem;color:var(--ink);line-height:1.45;padding-top:.15rem}
+.group dd{color:var(--ink-2);font-size:1.02rem}
+
+/* ---------- simple tables ---------- */
+.tbl{width:100%;border-collapse:collapse}
+.tbl td{padding:.7rem 0;border-top:1px solid var(--rule);vertical-align:top}
+.tbl tr:first-child td{border-top:0;padding-top:.2rem}
+.tbl td:first-child{font-family:var(--sans);font-size:.9rem;color:var(--ink-3);width:10.5rem;padding-right:1.2rem;white-space:nowrap}
+.tbl b{font-family:var(--sans);font-weight:600}
+.tbl .sub{display:block;color:var(--ink-2);font-size:1rem}
+.gpa{font-family:var(--sans);font-size:.88rem;display:inline-block;margin-top:.35rem;padding:.1rem .55rem;border-radius:4px;background:var(--cobalt-soft);color:var(--cobalt)}
+.big{font-family:var(--sans);font-weight:800;font-size:2.3rem;letter-spacing:-.04em;color:var(--cobalt);line-height:1}
+.honors{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}
+.honors p{color:var(--ink-2);font-size:1rem;margin-top:.4rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;font-family:var(--sans);font-size:.88rem}
+.chips span{padding:.2rem .65rem;border:1px solid var(--rule);border-radius:4px;color:var(--ink-2);background:var(--sheet)}
+details{margin-top:1.4rem;font-family:var(--sans)}
+summary{cursor:pointer;color:var(--cobalt);font-size:.95rem}
+details ul{columns:2;column-gap:2rem;margin-top:.8rem;list-style:none;font-family:var(--serif);font-size:1rem;color:var(--ink-2)}
+details li{break-inside:avoid;padding:.15rem 0}
+details li small{color:var(--ink-3);font-family:var(--sans);font-size:.78rem}
+
+/* ---------- contact ---------- */
+.contact{margin:4.5rem 0 0;padding:3rem 0;border-top:2px solid var(--ink)}
+.contact h2{font-family:var(--sans);font-weight:700;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.03em;line-height:1.1;max-width:30rem}
+.contact p{color:var(--ink-2);max-width:var(--measure);margin-top:1rem}
+footer{font-family:var(--sans);font-size:.85rem;color:var(--ink-3);padding:2rem 0 3rem;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+footer a{color:var(--ink-3)}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .row{grid-template-columns:minmax(0,1fr);gap:1.2rem}
+  .row > h2{position:static;font-size:1.35rem}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:2rem}
+  .photo{max-width:11rem}
+  .hero-grid > div:last-child{order:-1}
+  .news{grid-template-columns:minmax(0,1fr);gap:.8rem}
+}
+@media (max-width:640px){
+  body{font-size:1.06rem}
+  .bar-in{height:auto;flex-wrap:wrap;padding:.6rem 1rem;gap:.4rem 1rem}
+  .nav{order:3;width:100%;margin:0;overflow-x:auto;gap:1.1rem;scrollbar-width:none;padding-bottom:.2rem}
+  .nav::-webkit-scrollbar{display:none}
+  .theme{margin-left:auto}
+  .wrap{padding:0 1rem}
+  html{scroll-padding-top:6.5rem}
+  .group dl{grid-template-columns:minmax(0,1fr);gap:.1rem}
+  .group dd{margin-bottom:.7rem}
+  .tbl td:first-child{width:auto;white-space:normal;display:block;padding-bottom:0}
+  .tbl td{display:block;border-top:0;padding:.15rem 0}
+  .tbl tr{display:block;border-top:1px solid var(--rule);padding:.6rem 0}
+  .tbl tr:first-child{border-top:0}
+  .honors{grid-template-columns:minmax(0,1fr)}
+  details ul{columns:1}
+  .news li{grid-template-columns:minmax(0,1fr);gap:0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+}
+@media print{
+  .bar,.theme,.links{display:none}
+  body{background:#fff;color:#000;font-size:11pt}
+  .row > h2{position:static}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar" id="bar">
+  <div class="bar-in">
+    <a class="name-mark" href="#top">Alireza Shafaei</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme" id="theme" aria-label="Switch light or dark theme">
+      <svg class="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap" id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" aria-labelledby="who">
+    <div class="hero-grid">
+      <div>
+        <h1 id="who">Alireza<br>Shafaei</h1>
+        <p class="role">M.Sc. researcher in Electrical Engineering (Digital Systems) at Sharif University of Technology, Tehran.</p>
+        <div class="intro">
+          <p>I work where a learning system meets the hardware and the people that depend on it. My question is usually the same one in different clothes: when a model, or a model's output, makes a claim, how do we check it cheaply and with a known error rate?</p>
+          <p class="soft">That has meant a cloud language model whose every decision passes a small verifier before it runs, a privacy audit that found a published attack flagging far more genuine samples than it promised, and an evaluation protocol for deployed models under drift that was fixed before any result was seen.</p>
+        </div>
+        <div class="links">
+          <a class="btn main" href="Alireza_Shafaei_CV.pdf" download>
+            <svg viewBox="0 0 24 24"><path d="M12 3v12M7 11l5 5 5-5M4 20h16"/></svg>Download CV
+          </a>
+          <a class="btn" href="mailto:shafaei.erfan.20019@gmail.com">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email
+          </a>
+          <a class="btn" href="https://arxiv.org/abs/2611.02251" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg>arXiv paper
+          </a>
+          <a class="btn" href="https://github.com/Alireza-Shafaei" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>GitHub
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/alireza-shafaei-a22349231/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4"/></svg>LinkedIn
+          </a>
+        </div>
+      </div>
+      <div>
+        <img class="photo" src="profile.jpg" alt="Portrait of Alireza Shafaei" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <div class="news" aria-label="Recent news">
+      <h2>News</h2>
+      <ul>
+        <li><span>Nov 2026</span><p>Our paper on retrain, alert or rollback decisions under concept drift is on <a href="https://arxiv.org/abs/2611.02251" target="_blank" rel="noopener">arXiv</a> and under review at Data Mining and Knowledge Discovery.</p></li>
+        <li><span>Nov 2026</span><p>Submitted a research proposal on brain-inspired, risk-controlled edge–cloud uplinks for IoT event detection.</p></li>
+        <li><span>Oct 2026</span><p>Pre-registered the design of our membership-inference study of decomposed diffusion models on <a href="https://doi.org/10.5281/zenodo.23454091" target="_blank" rel="noopener">Zenodo</a>.</p></li>
+        <li><span>2026</span><p>Master's thesis in its final stage; the journal manuscript is being prepared for IEEE Internet of Things Journal.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= RESEARCH ================= -->
+  <section id="research" class="row" aria-labelledby="h-research">
+    <h2 id="h-research">Research<small>Projects by stage</small></h2>
+    <div class="body">
+
+      <article class="proj">
+        <div class="proj-head"><span class="state">Final stage</span><span>Master's thesis, 2025 to present</span></div>
+        <h3>In-Context Learning as a Service: Lyapunov-Optimized Split Computing</h3>
+        <p>A quantized cloud language model decides, through retrieval-augmented prompting, where deep networks should be split across heterogeneous edge devices. Because its suggestions cannot be trusted blindly, every decision passes through a deterministic guardrail that certifies memory feasibility on both sides before anything runs.</p>
+        <ul class="facts">
+          <li>Proved that the guardrail terminates in a bounded number of steps and only adds a finite constant to the drift-plus-penalty bound, so safety and queue stability hold together.</li>
+          <li>Roofline-based GPU energy model, shown to be strictly convex and non-monotone in clock frequency.</li>
+          <li>NP-hard transmit-power subproblem solved with a fractional-programming method that converges monotonically.</li>
+          <li>Validated on two physically separate machines over a rate-shaped uplink, so every number comes from hardware.</li>
+        </ul>
+        <p class="sup">Journal manuscript in preparation for IEEE Internet of Things Journal. Supervisor: <a href="https://scholar.google.com/citations?user=dcjIFccAAAAJ&amp;hl=en" target="_blank" rel="noopener">Dr. Hamed Shah-Mansouri</a></p>
+      </article>
+
+      <article class="proj">
+        <div class="proj-head"><span class="state">In progress</span><span>Research project, 2026 to present</span></div>
+        <h3>Where Do Decomposed Diffusion Models Leak Membership?</h3>
+        <p>The first controlled privacy study of wavelet diffusion and diffusion-GAN models: 11 pretrained generators across pixel, wavelet and latent families, tested with 13 published attacks and with CBT, my own member-free test that is calibrated per wavelet band and noise level.</p>
+        <ul class="facts">
+          <li>The design was pre-registered and time-stamped on Zenodo before any result was seen, with blinded splits and low false-positive-rate evaluation.</li>
+          <li>Found that a published attack promising a 1% false-positive rate flags 14.5% to 27.2% of genuine samples.</li>
+        </ul>
+        <p class="sup">Target venue PoPETs 2027. Supervisor: <a href="https://scholar.google.com/citations?user=24GngZYAAAAJ&amp;hl=en" target="_blank" rel="noopener">Dr. Sajjad Amini</a></p>
+      </article>
+
+      <article class="proj">
+        <div class="proj-head"><span class="state">Preprint, under review</span><span>Research project, 2026</span></div>
+        <h3>Retrain, Alert, or Rollback? Production ML Under Concept Drift</h3>
+        <p>When a deployed model's data drifts, should the system retrain, raise an alert, or roll back? We describe the answer as a five-state machine in which each response has its own trigger and cost, with joint retraining gates, a two-stage canary deployment and a rollback whose type depends on the cause of the drift.</p>
+        <ul class="facts">
+          <li>I built the evaluation harness, the data-provenance pipeline and the archived artifact.</li>
+          <li>Pre-registered protocol over 13 real data streams with rank-based analysis, so no method could be tuned to the test afterwards.</li>
+        </ul>
+        <p class="sup">Joint first author. Supervisors: <a href="https://scholar.google.com/citations?user=8HsoXAUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Dr. Babak Hossein Khalaj</a> and <a href="https://scholar.google.com/citations?hl=en&amp;user=8iIRoNwAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener">Dr. Hamid Hadibeik</a></p>
+      </article>
+
+      <article class="proj">
+        <div class="proj-head"><span class="state new">Proposal stage</span><span>Follow-up to the thesis, 2026</span></div>
+        <h3>Sense, Predict, React: A Brain-Inspired, Risk-Controlled Edge–Cloud Uplink for IoT Event Detection</h3>
+        <p>An IoT node that decides when to send, what to send and when to act on its own. It uses a retina-like event encoder with homeostatic thresholds, a spiking predictor whose prediction error is both the uplink message and the anomaly evidence, and a local reflex that is always verified by the cloud.</p>
+        <ul class="facts">
+          <li>Online risk control bounds missed events under censored feedback through randomised audits, and a Lyapunov virtual queue enforces a byte budget.</li>
+          <li>Planned matched and ablated comparison of spiking, dense and activity-sparse models on TSB-AD-M and ESA-ADB over a real-link testbed.</li>
+        </ul>
+        <p class="sup">Supervisor: <a href="https://scholar.google.com/citations?user=dcjIFccAAAAJ&amp;hl=en" target="_blank" rel="noopener">Dr. Hamed Shah-Mansouri</a></p>
+      </article>
+
+      <article class="proj">
+        <div class="proj-head"><span class="state done">Completed</span><span>Bachelor's thesis, 2024</span></div>
+        <h3>Reinforcement Learning and Intelligent State Discretization</h3>
+        <p>Tabular Q-learning needs a discretised state space, and a uniform grid is too coarse where it matters and wasteful everywhere else. I replaced it with a refinement driven by the agent's own visit counts. Without any model of the physics, the grid settled on the balance point of CartPole and the valley walls and summit of MountainCar. Benchmarked against PPO on CartPole, MountainCar and Pendulum.</p>
+        <p class="sup">Supervisor: Dr. Saeed Bagheri Shouraki</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ================= PUBLICATIONS ================= -->
+  <section id="publications" class="row" aria-labelledby="h-pub">
+    <h2 id="h-pub">Publications<small>And research artifacts</small></h2>
+    <div class="body">
+      <article class="pub">
+        <h3>Retrain, Alert, or Rollback? A Three-Response Decision Framework for Production ML Under Concept Drift</h3>
+        <div class="au">A. Sadeghian<sup>†</sup>, <b>A. Shafaei</b><sup>†</sup>, H. Hadibeik, B. H. Khalaj</div>
+        <div class="venue">arXiv preprint, November 2026. Under peer review at Data Mining and Knowledge Discovery (Springer).</div>
+        <div class="meta">
+          <a class="tag" href="https://arxiv.org/abs/2611.02251" target="_blank" rel="noopener">arXiv:2611.02251</a>
+          <a class="tag" href="https://arxiv.org/pdf/2611.02251" target="_blank" rel="noopener">PDF</a>
+          <span class="tag quiet">cs.LG, cs.SE</span>
+        </div>
+      </article>
+      <article class="pub">
+        <h3>In-Context Learning as a Service: Lyapunov-Optimized Split Computing for Edge AI</h3>
+        <div class="au"><b>A. Shafaei</b>, H. Shah-Mansouri</div>
+        <div class="venue">Manuscript in preparation for IEEE Internet of Things Journal.</div>
+      </article>
+      <article class="pub">
+        <h3>Where Do Decomposed Diffusion Models Leak Membership?</h3>
+        <div class="au"><b>A. Shafaei</b>, S. Amini</div>
+        <div class="venue">Manuscript in preparation for PoPETs 2027. Study design pre-registered on Zenodo, October 2026.</div>
+        <div class="meta">
+          <a class="tag" href="https://doi.org/10.5281/zenodo.23454091" target="_blank" rel="noopener">Pre-registration: 10.5281/zenodo.23454091</a>
+        </div>
+      </article>
+      <p class="note"><sup>†</sup> Equal contribution.</p>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" class="row" aria-labelledby="h-proj">
+    <h2 id="h-proj">Projects<small>Coursework and independent work</small></h2>
+    <div class="body">
+
+      <div class="group">
+        <h3>Generative models and deep learning, 2025 to 2026</h3>
+        <dl>
+          <dt>Energy-based model on MNIST</dt><dd>Trained with Langevin-dynamics sampling.</dd>
+          <dt>Time-aware quantization for diffusion language models</dt><dd>A post-training quantization framework whose bit allocation adapts to the denoising step, for compression and faster inference.</dd>
+          <dt>WaveNet for raw audio</dt><dd>Autoregressive waveform generation with dilated causal convolutions.</dd>
+          <dt>Flows, CVAE and graph forecasting</dt><dd>RealNVP and PermutFlow normalizing flows, a CVAE for class-controlled digit generation, and probabilistic graph forecasting.</dd>
+          <dt>Continuous retraining loop</dt><dd>Prefect for orchestration, MLflow for tracking and the model registry, a FastAPI server with zero-downtime model hot-swapping, and a KS-test monitor that detects drift and triggers retraining.</dd>
+        </dl>
+      </div>
+
+      <div class="group">
+        <h3>Machine learning and data analysis, 2024 to 2025</h3>
+        <dl>
+          <dt>Massive data analysis</dt><dd>Pixie-style, Topic-Specific PageRank and HITS recommenders, and a PySpark Structured Streaming pipeline for real-time sentiment aggregation.</dd>
+          <dt>Statistical learning</dt><dd>Age and gender estimation with Linear, Ridge and Lasso regression, PCA and ROC-AUC, plus a drag-and-drop Python tool for marking face bounding boxes.</dd>
+          <dt>GAN-BERT, CNNs, Hopfield and SOM</dt><dd>GAN-BERT for telling AI-written from human text, CNN classifiers for TIG welding defects, and Hopfield networks and self-organising maps built from scratch.</dd>
+        </dl>
+      </div>
+
+      <div class="group">
+        <h3>Networks and embedded systems, 2024 to 2025</h3>
+        <dl>
+          <dt>IoT event detection on an Orange Pi</dt><dd>An edge device running Python audio detectors, publishing over MQTT to a Mosquitto broker, with a LAMP dashboard and systemd limits for unattended operation.</dd>
+          <dt>Protocols from sockets up</dt><dd>A UDP-based DNS server checked in Wireshark, SMTP clients and an authenticated mailbox server, and data link, MAC and network layers in OMNeT++.</dd>
+        </dl>
+      </div>
+
+      <div class="group">
+        <h3>Hardware and circuits, 2019 to 2023</h3>
+        <dl>
+          <dt>MIPS multi-cycle processor</dt><dd>Datapath and control unit in Verilog, verified instruction by instruction.</dd>
+          <dt>Analog and digital circuits</dt><dd>High-frequency MOSFET amplifiers and the 741 op-amp in HSPICE, digital stopwatches and multivibrators in Proteus and PSpice.</dd>
+        </dl>
+      </div>
+
+      <div class="group">
+        <h3>Early machine learning and neural modelling, 2023 to 2024</h3>
+        <dl>
+          <dt>Neuron models</dt><dd>Hodgkin-Huxley and leaky integrate-and-fire simulations, comparing what each level of abstraction throws away.</dd>
+          <dt>Classical methods</dt><dd>VAE and CVAE, EM clustering for Gaussian mixtures, SVMs, decision trees and AlexNet fine-tuning.</dd>
+        </dl>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= TEACHING & WORK ================= -->
+  <section id="teaching" class="row" aria-labelledby="h-teach">
+    <h2 id="h-teach">Teaching and work<small>Six assistantships, one startup</small></h2>
+    <div class="body">
+      <table class="tbl">
+        <tr><td>2026</td><td><b>Deep Generative Models</b> (graduate)<span class="sub">Teaching assistant for Dr. Sajjad Amini</span></td></tr>
+        <tr><td>2025</td><td><b>Neural Networks</b> (graduate)<span class="sub">Teaching assistant for Dr. Saeed Bagheri Shouraki</span></td></tr>
+        <tr><td>2025</td><td><b>Machine Learning and Vision Lab</b><span class="sub">Teaching assistant for Dr. Mohammadzadeh</span></td></tr>
+        <tr><td>2023</td><td><b>Principles of Solid State Devices</b><span class="sub">Teaching assistant for Dr. Sarvari</span></td></tr>
+        <tr><td>2023</td><td><b>Design of Microprocessor Systems</b><span class="sub">Teaching assistant for Dr. Hajsadeghi</span></td></tr>
+        <tr><td>2022, 2023</td><td><b>Electronics 1 and 2</b><span class="sub">Teaching assistant for Dr. Fakharzadeh</span></td></tr>
+        <tr><td>2026</td><td><b>AI Engineer and Backend Developer, Athlx</b> (startup)<span class="sub">Django backends for building management systems that process real-time IoT telemetry, and time-series anomaly detection for predictive maintenance and energy optimisation.</span></td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- ================= EDUCATION ================= -->
+  <section id="education" class="row" aria-labelledby="h-edu">
+    <h2 id="h-edu">Education<small>Sharif University of Technology</small></h2>
+    <div class="body">
+      <table class="tbl">
+        <tr><td>2024 to 2027</td><td><b>M.Sc. in Electrical Engineering, Digital Systems</b><span class="sub">Expected March 2027</span><span class="gpa">GPA 18.02 / 20 (3.87 / 4)</span></td></tr>
+        <tr><td>2019 to 2024</td><td><b>B.Sc. in Electrical Engineering</b><span class="gpa">GPA 17.03 / 20 (3.52 / 4)</span></td></tr>
+        <tr><td>2021 to 2024</td><td><b>Minor in Economics</b></td></tr>
+      </table>
+      <p class="note">Sharif is ranked first in Iran and 151 to 200 worldwide in electrical engineering (QS 2026).</p>
+
+      <div class="honors">
+        <div><div class="big">21st</div><p>of about 20,000 in the national M.Sc. entrance exam in Electrical Engineering, 2024</p></div>
+        <div><div class="big">24th</div><p>of about 150,000 in the national university entrance exam, Mathematics and Physics, 2019</p></div>
+      </div>
+
+      <details>
+        <summary>Selected courses</summary>
+        <ul>
+          <li>Deep Generative Models <small>graduate</small></li>
+          <li>Statistical Learning <small>graduate</small></li>
+          <li>Big Data Analytics <small>graduate</small></li>
+          <li>Convex Optimization 2 <small>graduate</small></li>
+          <li>Deep Learning <small>graduate</small></li>
+          <li>Neural Networks <small>graduate</small></li>
+          <li>Data Communication Networks <small>graduate</small></li>
+          <li>Embedded Systems <small>graduate</small></li>
+          <li>Neuroscience of Learning, Memory and Cognition <small>graduate</small></li>
+          <li>Advanced Computer Architecture <small>graduate</small></li>
+          <li>System-2 AI <small>graduate, audit</small></li>
+          <li>Deep Reinforcement Learning <small>graduate, audit</small></li>
+          <li>Introduction to Machine Learning</li>
+          <li>Convex Optimization 1</li>
+          <li>Communication Circuits</li>
+          <li>Electronics 3</li>
+          <li>Pulse Techniques and Digital Circuits</li>
+          <li>Design of Microprocessor Systems</li>
+          <li>Econometrics</li>
+          <li>Financial Economics</li>
+          <li>Digital Economics</li>
+          <li>Macroeconomics</li>
+          <li>Microeconomics</li>
+        </ul>
+      </details>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section id="skills" class="row" aria-labelledby="h-skills">
+    <h2 id="h-skills">Skills<small>What I work with</small></h2>
+    <div class="body">
+      <table class="tbl">
+        <tr><td>Programming</td><td><div class="chips"><span>Python</span><span>C</span><span>Verilog</span><span>MATLAB</span><span>LaTeX</span></div></td></tr>
+        <tr><td>ML and data</td><td><div class="chips"><span>PyTorch</span><span>TensorFlow</span><span>Keras</span><span>scikit-learn</span><span>PySpark</span><span>Pandas</span><span>NumPy</span><span>SciPy</span><span>Gym</span></div></td></tr>
+        <tr><td>Systems and MLOps</td><td><div class="chips"><span>Django</span><span>FastAPI</span><span>MLflow</span><span>Prefect</span><span>MQTT</span><span>Linux</span></div></td></tr>
+        <tr><td>Hardware</td><td><div class="chips"><span>FPGA development</span><span>MIPS, AVR, ARM</span><span>HSPICE</span><span>PSpice</span><span>Proteus</span><span>ADS</span><span>OMNeT++</span></div></td></tr>
+        <tr><td>Research practice</td><td><div class="chips"><span>Pre-registration</span><span>Blinded evaluation</span><span>Bootstrap confidence intervals</span><span>Equivalence testing</span><span>Reproducible pipelines</span><span>Artifact checksumming</span></div></td></tr>
+        <tr><td>Languages</td><td><div class="chips"><span>Persian, native</span><span>English, advanced</span><span>Arabic, intermediate</span></div></td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="contact" aria-labelledby="h-contact">
+    <h2 id="h-contact">I am looking for a PhD position starting in 2027.</h2>
+    <p>Edge intelligence, trustworthy and private machine learning, generative models, and learning systems whose claims can be checked. If any of this overlaps with your group's work, I would be glad to hear from you.</p>
+    <div class="links">
+      <a class="btn main" href="mailto:shafaei.erfan.20019@gmail.com">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>shafaei.erfan.20019@gmail.com
+      </a>
+      <a class="btn" href="mailto:ali.shafaei.80@sharif.edu">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>ali.shafaei.80@sharif.edu
+      </a>
+      <a class="btn" href="Alireza_Shafaei_CV.pdf" download>
+        <svg viewBox="0 0 24 24"><path d="M12 3v12M7 11l5 5 5-5M4 20h16"/></svg>CV (PDF)
+      </a>
+      <a class="btn" href="https://t.me/Erfan13806" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M21 4 2.5 11.2l5.3 1.7L19 6.5l-8.7 8.1.3 5.4 3-3.6 4.6 3.4z"/></svg>Telegram
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <span>Tehran, Iran. <a href="https://en.sharif.edu" target="_blank" rel="noopener">Sharif University of Technology</a></span>
+    <span>&copy; <span id="yr">2026</span> Alireza Shafaei</span>
+  </footer>
+
+</div>
+</main>
+
+<script>
+(function(){
+  "use strict";
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* theme, remembered per browser when storage is available */
+  var root = document.documentElement, btn = document.getElementById('theme');
+  var saved = null;
+  try{ saved = localStorage.getItem('theme'); }catch(e){}
+  root.setAttribute('data-theme', saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+  btn.addEventListener('click', function(){
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark'
+             : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var next = dark ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try{ localStorage.setItem('theme', next); }catch(e){}
+  });
+
+  /* active section in the top bar */
+  var bar = document.getElementById('bar');
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav a'));
+  var secs = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  var ticking = false;
+  function sync(){
+    bar.classList.toggle('stuck', window.scrollY > 8);
+    var line = window.scrollY + window.innerHeight*0.3, idx = -1;
+    secs.forEach(function(s,i){ if (s && s.offsetTop <= line) idx = i; });
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) idx = links.length - 1;
+    links.forEach(function(a,i){ a.classList.toggle('on', i === idx); });
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){ if(!ticking){ ticking = true; requestAnimationFrame(sync); } }, {passive:true});
+  window.addEventListener('resize', sync);
+  sync();
+})();
+</script>
+</body>
+</html>
